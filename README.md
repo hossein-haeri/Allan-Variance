@@ -1,7 +1,9 @@
 # Allan-Variance
 This repository contains functions that calculate Allan variance of the input data
 
-Please cite it as https://ieeexplore.ieee.org/abstract/document/9268459 - automatic!
+If you use the files, please cite it as:
+Haeri, H., Beal, C.E. and Jerath, K., 2020. Near-optimal Moving Average Estimation at Characteristic Timescales: An Allan Variance Approach. IEEE Control Systems Letters.
+Available at https://ieeexplore.ieee.org/abstract/document/9268459 
 
 
 ## 1) Use AVAR.m for regularly sampled data:
