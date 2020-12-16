@@ -38,7 +38,7 @@ for tau_indx= 1:numel(tau_list)
         x_1 = data_x(t<data_t & data_t<t+tau);
         x_2 = data_x(t+tau<data_t & data_t<t+2*tau);
         
-        % count how many points each windows contains
+        % count how many points each window contains
         c_1 = numel(x_1);
         c_2 = numel(x_2);
         
