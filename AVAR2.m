@@ -1,14 +1,15 @@
 function avar = AVAR2(data_t,data_x,tau_list)
+%% coded by Hossein Haeri %%
+%% please cite this paper if you used the code: https://ieeexplore.ieee.org/abstract/document/9268459 %%
+%% the code estimates the Allan variance of irregularly sampled data (equation (6) in the paper)
 
 %% FUNCTION INPUTS %%
-% data_t: data time stamps
-% data_x: data values
-% tau_list: list of window lengths which AVAR needs to be evaluated with 
+    % data_t: data time stamps
+    % data_x: data values
+    % tau_list: list of window lengths which AVAR needs to be evaluated with 
 %% FUNCTION OUTPUTS %%
-% avar: Allan variance of the data evaluated with each window length in tau_list 
+    % avar: Allan variance of the data evaluated with each window length in tau_list 
 
-
-%%
 avar = zeros(numel(tau_list),1);
 t_min = data_t(1);
 t_max = data_t(end);
