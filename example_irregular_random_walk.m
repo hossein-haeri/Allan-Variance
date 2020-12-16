@@ -36,21 +36,23 @@ avar = AVAR2(t, y, tau);
 
 subplot(3,1,1)
 hold on
-plot(y, 'DisplayName', 'Irregular RW measurements')
-plot(x_, 'DisplayName', 'Irregular RW signal')
+plot(t, y, 'DisplayName', 'Irregular RW measurements')
+plot(t, x_, 'DisplayName', 'Irregular RW signal')
 legend
 grid on
-xlabel('Window length (m)')
-ylabel('AVAR')
+xlabel('Time')
+ylabel('Signal value')
+box on
 
 subplot(3,1,2)
 loglog(tau, avar)
 grid on
-xlabel('Window length (m)')
+xlabel('Window length (\tau)')
 ylabel('AVAR')
+box on
 
 subplot(3,1,3)
 histogram(t, 50)
 xlabel('Time stamp value')
 ylabel('Time stamp frequency')
-
+box on
