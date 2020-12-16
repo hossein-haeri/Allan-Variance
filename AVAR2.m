@@ -20,18 +20,22 @@ dt = mean(diff(data_t))/2;
 % for each window length (tau) in tau_list
 for tau_indx= 1:numel(tau_list)        
     tau = tau_list(tau_indx);
+    
+    % store the weights accumulatively (this calculates the denominator in the equation (6) of the paper)
     total_weights = 0;
+    
+    % store the AVAR samples accumulatively across the time (this calculates the numerator in the equation (6) of the paper)
     E = 0;
+    
+    % sliding step (less dt means more number of elements in the set 'S' in the equation (6) of the paper)
     dt = tau/2;
+    
     % for each sliding time t
     for t= t_min:dt:t_max
-
+    
         % extract data points which fall into the two adjacent windows 1 and 2 
         x_1 = data_x(t<data_t & data_t<t+tau);
         x_2 = data_x(t+tau<data_t & data_t<t+2*tau);
-        
-%         x_1 = data_x(data_t<t & data_t>t-tau);
-%         x_2 = data_x(data_t<t-tau & data_t>t-2*tau);
         
         % count how many points each windows contains
         c_1 = numel(x_1);
@@ -46,17 +50,18 @@ for tau_indx= 1:numel(tau_list)
 
         % if weight is nonzero then
         if ~weight==0
-%                 weight = 1;
+       
                 %  add the weighted squared difference of averages to E
                 E = E + weight*(x_bar_1 -  x_bar_2)^2;
+                
                 % keep track of total weights
                 total_weights  = total_weights + weight;
         end
-        
     end
 
     % normalize expected value with respect of the weights
     E = 0.5*E/total_weights;
+    
     avar(tau_indx) = E;
 end
 end
