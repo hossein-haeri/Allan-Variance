@@ -16,6 +16,7 @@ t = sort(rand(1000,1));
 
 x_ = zeros(1000, 1);
 for i= 1:1000
+    % choose the value which its time stamp is the closest to t(i)
     index = round(10000*t(i));
     x_(i) = x(index);
 end
