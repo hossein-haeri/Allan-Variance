@@ -18,6 +18,7 @@ Regularly sampled data are any time data whose time stamps are evenly spaced and
 
 ## 2) Use AVAR2.m for irregularly sampled data:
 For most of the data, the time stamps are not evenly spaced and so the data is irregularly sampled in time. 'AVAR2.m' function estimates the Allan variance of any given data. The 'AVAR2.m' function takes data time stamps, data values, and a list of window lengths that AVAR needs to be calculated at. The window length in this function is in units of time.
+The following graph shows the results of 'example_irregular_random_walk.m' where 1000 time stamps are randomly and uniformly sampled from [0, 1] and the Allan variance is estimated using 'AVAR2.m' function.
 
 ![](irregular_example.png)
 
