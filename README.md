@@ -9,7 +9,7 @@ Available at https://ieeexplore.ieee.org/abstract/document/9268459
 ## 1) Use AVAR.m for regularly sampled data:
 Regularly sampled data are any time data whose time stamps are evenly spaced and are sampled according to a specific sampling frequency. The Allan variance of such timeseries can be calculated using the classical AVAR estimators like the MATLAB's build-in 'allanvar' function (requires signal processing toolbox). The function 'AVAR.m' calculates the Allan variance for such data. It takes a timeseries x as a vector and a list of window lengths that AVAR needs to be calculated at. The window length in this function is in units of number of the samples.
 'example_regular_white_noise.m' is a simple example which calculates the Allan variance of a white noise signal.
-'example_regular_random_walk.m' is another example which calculates the Allan variance of a random walk signal corrupted wuth white Gaussian noise.
+'example_regular_random_walk.m' is another example which calculates the Allan variance of a random walk signal corrupted with white Gaussian noise.
 
 
 
