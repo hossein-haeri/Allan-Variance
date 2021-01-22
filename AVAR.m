@@ -8,10 +8,10 @@ function [avar] = AVAR(x,m_list)
 %% FUNCTION OUTPUTS %%
     % avar: Allan variance of the data evaluated with each window length in tau_list 
 
-# initialze n as number of data points 
+% initialze n as number of data points 
 n = numel(x);
 
-# initialized avar as an empty list for storing Allan variance values
+% initialized avar as an empty list for storing Allan variance values
 avar = [];
 
 % iterate for each window length m
