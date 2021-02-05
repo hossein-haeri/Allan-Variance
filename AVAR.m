@@ -20,7 +20,7 @@ for i=1:numel(m_list)
     
     % calculate Allan variance accumulatively accross the time
     avar_sum = 0;
-    for k= 1+m:n-2*m
+    for k= 1:n-2*m
         % use the definition of the Allan variance to calculate it at the time step k and window length m
         avar_sum = avar_sum + 0.5*(mean(x(k:k+m-1))-mean(x(k+m:k+2*m-1)))^2;
     end
