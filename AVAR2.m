@@ -32,7 +32,7 @@ for tau_indx= 1:numel(tau_list)
     dt = tau/2;
     
     % for each sliding time t
-    for t= t_min:dt:t_max
+    for t= t_min:dt:t_max-2*tau
     
         % extract data points which fall into the two adjacent windows 1 and 2 
         x_1 = data_x(t<data_t & data_t<t+tau);
