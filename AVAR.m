@@ -27,5 +27,8 @@ for i=1:numel(m_list)
     
     % average the accumulated Allan variance values
     avar = [avar avar_sum/(n-2*m)];
+    
+
+end
 end
 
